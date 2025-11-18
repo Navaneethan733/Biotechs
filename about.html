@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STACKLY Biotech - Advancing Healthcare</title>
+    <title>About Us - STACKLY Biotech</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-<style>
- * {
+    <style>
+        /* All the CSS from the homepage is included here */
+        /* For brevity, I'm not duplicating all the CSS but it would be the same as the homepage */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -264,7 +266,7 @@
                         url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-            height: 100vh;
+            height: 60vh;
             display: flex;
             align-items: center;
             padding-top: 80px;
@@ -325,19 +327,51 @@
             color: var(--accent);
         }
 
-        /* Services Section */
-        .services {
-            padding: 100px 0;
-            background-color: var(--light);
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(rgba(26, 82, 118, 0.8), rgba(26, 82, 118, 0.9)), 
+                        url('https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            color: white;
         }
 
-        .services-grid {
+        .about-hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            font-weight: 400;
+            letter-spacing: 3px;
+        }
+
+        .about-hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .mission-vision {
+            background-color: var(--light);
+            padding: 100px 0;
+        }
+
+        .mission-vision-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 40px;
         }
 
-        .service-card {
+        .mission-card, .vision-card {
             background-color: white;
             border-radius: 5px;
             overflow: hidden;
@@ -347,224 +381,216 @@
             padding: 40px 30px;
         }
 
-        .service-card:hover {
+        .mission-card:hover, .vision-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
-        .service-icon {
+        .mission-icon, .vision-icon {
             font-size: 3rem;
             color: var(--primary);
             margin-bottom: 20px;
         }
 
-        .service-card h3 {
+        .mission-card h3, .vision-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-weight: 400;
+        }
+
+        .mission-card p, .vision-card p {
+            color: #666;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .values {
+            padding: 100px 0;
+            background-color: var(--cream);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .value-card h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: var(--dark);
             font-weight: 400;
         }
 
-        .service-card p {
+        .value-card p {
             color: #666;
             font-family: 'Raleway', sans-serif;
         }
 
-        /* Research Areas */
-        .research {
-            padding: 100px 0;
-            background-color: var(--cream);
-        }
-
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .research-card {
-            position: relative;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            height: 300px;
-        }
-
-        .research-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .research-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .research-card:hover .research-img {
-            transform: scale(1.1);
-        }
-
-        .research-name {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 1.3rem;
-            letter-spacing: 1px;
-        }
-
-        /* Featured Products */
-        .products {
+        .timeline {
             padding: 100px 0;
             background-color: var(--light);
         }
 
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .timeline-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        .product-card {
+        .timeline-container::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
             background-color: white;
-            border-radius: 5px;
-            overflow: hidden;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            left: 50%;
+        }
+
+        .left::after {
+            right: -12px;
+        }
+
+        .right::after {
+            left: -12px;
+        }
+
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
         }
 
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .product-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .product-card:hover .product-img {
-            transform: scale(1.05);
-        }
-
-        .product-info {
-            padding: 25px;
-            text-align: center;
-        }
-
-        .product-info h3 {
+        .timeline-content h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
-            color: var(--dark);
-            font-weight: 400;
+            color: var(--primary);
         }
 
-        .product-info p {
+        .timeline-content p {
+            font-family: 'Raleway', sans-serif;
             color: #666;
-            margin-bottom: 15px;
-            font-family: 'Raleway', sans-serif;
         }
 
-        .product-button {
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-family: 'Raleway', sans-serif;
-            font-weight: 500;
-            width: 100%;
-        }
-
-        .product-button:hover {
-            background-color: #154360;
-        }
-
-        /* About Section */
-        .about {
+        .team {
             padding: 100px 0;
             background-color: var(--cream);
-            display: flex;
-            align-items: center;
         }
 
-        .about .container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .about-img {
-            flex: 1;
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .about-content {
-            flex: 1;
-        }
-
-        .about-content h2 {
-            font-size: 2.8rem;
-            margin-bottom: 20px;
-            color: var(--dark);
-            font-weight: 400;
-        }
-
-        .about-content p {
-            margin-bottom: 20px;
-            color: #666;
-            font-family: 'Raleway', sans-serif;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 100px 0;
-            background-color: var(--light);
-        }
-
-        .testimonial-grid {
+        .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
 
-        .testimonial-card {
+        .team-card {
             background-color: white;
             border-radius: 5px;
-            padding: 30px;
+            overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
             text-align: center;
         }
 
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: var(--dark);
+            font-weight: 400;
+        }
+
+        .team-info p {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .team-info .team-desc {
             color: #666;
             font-family: 'Raleway', sans-serif;
         }
 
-        .testimonial-author {
-            font-weight: 600;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
             color: var(--dark);
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--primary);
         }
 
         /* Footer */
@@ -738,6 +764,25 @@
             .logo-text {
                 font-size: 1.5rem;
             }
+
+            /* Timeline adjustments for mobile */
+            .timeline-container::after {
+                left: 31px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+
+            .timeline-item::after {
+                left: 20px;
+            }
+
+            .right {
+                left: 0%;
+            }
         }
 
         @media (max-width: 576px) {
@@ -771,9 +816,13 @@
             .logo-text {
                 font-size: 1.3rem;
             }
+
+            .about-hero-content h1 {
+                font-size: 2.5rem;
+            }
         }
-</style>
-   </head>
+    </style>
+</head>
 <body>
     <!-- Header -->
     <header>
@@ -787,9 +836,9 @@
             </a>
             <ul class="nav-links">
                 <li class="dropdown">
-                    <a href="index.html" class="active">Home <i class="fas fa-chevron-down"></i></a>
+                    <a href="index.html">Home <i class="fas fa-chevron-down"></i></a>
                     <div class="dropdown-content">
-                        <a href="./home2.html">Home Page 2</a>
+                        <a href="./404.html">Home Page 2</a>
                     </div>
                 </li>
                 <li><a href="./research.html">Research</a></li>
@@ -808,149 +857,179 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- About Hero Section -->
+    <section class="about-hero">
         <div class="container">
-            <div class="hero-content">
-                <h1>STACKLY Biotech</h1>
-                <h2>Transforming Healthcare Through Innovation</h2>
-                <p>Pioneering <strong>GENOMIC MEDICINE</strong> and Advanced Therapeutics</p>
-                <a href="./404.html" class="cta-button">DISCOVER OUR RESEARCH</a>
+            <div class="about-hero-content">
+                <h1>About STACKLY Biotech</h1>
+                <p>Pioneering the future of healthcare through innovative biotechnology solutions</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Comprehensive biotechnology solutions for healthcare challenges</p>
+                <h2>Our Mission & Vision</h2>
+                <p>Driving innovation in biotechnology to transform patient care</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-dna"></i>
+            <div class="mission-vision-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
                     </div>
-                    <h3>Genomic Sequencing</h3>
-                    <p>Advanced DNA and RNA sequencing services for research and clinical applications.</p>
+                    <h3>Our Mission</h3>
+                    <p>To advance healthcare through cutting-edge biotechnology, developing innovative solutions that improve patient outcomes and address the world's most challenging medical conditions.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-vial"></i>
+                <div class="vision-card">
+                    <div class="vision-icon">
+                        <i class="fas fa-eye"></i>
                     </div>
-                    <h3>Diagnostic Development</h3>
-                    <p>Creating innovative diagnostic tools for early disease detection and monitoring.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-pills"></i>
-                    </div>
-                    <h3>Therapeutics</h3>
-                    <p>Developing targeted therapies for complex diseases using cutting-edge biotechnology.</p>
+                    <h3>Our Vision</h3>
+                    <p>To be the global leader in biotechnology innovation, transforming the future of medicine through groundbreaking research, ethical practices, and collaborative partnerships.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Research Areas -->
-    <section class="research">
+    <!-- Values Section -->
+    <section class="values">
         <div class="container">
             <div class="section-title">
-                <h2>Research Areas</h2>
-                <p>Exploring the frontiers of biotechnology and medicine</p>
+                <h2>Our Values</h2>
+                <p>The principles that guide our work and define our culture</p>
             </div>
-            <div class="research-grid">
-                <div class="research-card">
-                    <img src="./image/brain.webp" alt="Gene Therapy" class="research-img">
-                    <div class="research-name">Gene Therapy</div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We push the boundaries of science and technology to develop breakthrough solutions that address unmet medical needs.</p>
                 </div>
-                <div class="research-card">
-                    <img src="./image/reserch.webp" alt="Immunotherapy" class="research-img">
-                    <div class="research-name">Immunotherapy</div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of partnerships, working with researchers, clinicians, and patients to advance healthcare together.</p>
                 </div>
-                <div class="research-card">
-                    <img src="./image/stem-cells.webp" alt="Stem Cell Research" class="research-img">
-                    <div class="research-name">Stem Cell Research</div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We maintain the highest ethical standards in all our research, development, and business practices.</p>
                 </div>
-                <div class="research-card">
-                    <img src="./image/brainstand.webp" alt="Precision Medicine" class="research-img">
-                    <div class="research-name">Precision Medicine</div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Patient-Centered</h3>
+                    <p>Our work is always guided by the needs of patients, with the goal of improving lives and health outcomes.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Featured Products -->
-    <section class="products">
+    <!-- Company History -->
+    <section class="timeline">
         <div class="container">
             <div class="section-title">
-                <h2>Featured Products</h2>
-                <p>Innovative solutions for healthcare professionals</p>
+                <h2>Our Journey</h2>
+                <p>Milestones in our growth and development</p>
             </div>
-            <div class="products-grid">
-                <div class="product-card">
-                    <img src="./image/reserch.webp" alt="GeneSeq Pro" class="product-img">
-                    <div class="product-info">
-                        <h3>GeneSeq Pro</h3>
-                        <p>Next-generation sequencing platform for comprehensive genomic analysis</p>
-                        <a href="./404.html"><button class="product-button">Learn More</button></a>
+            <div class="timeline-container">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2010</h3>
+                        <p>STACKLY Biotech was founded by Dr. Elena Rodriguez with a vision to revolutionize genomic medicine.</p>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="./image/test.webp" alt="ImmunoAssay Kit" class="product-img">
-                    <div class="product-info">
-                        <h3>ImmunoAssay Kit</h3>
-                        <p>Advanced diagnostic kit for rapid detection of autoimmune markers</p>
-                        <a href="./404.html"><button class="product-button">Learn More</button></a>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2013</h3>
+                        <p>Launched our first product, GeneSeq Basic, establishing our presence in the genomic sequencing market.</p>
                     </div>
                 </div>
-                <div class="product-card">
-                    <img src="./image/brainstand.webp" alt="TheraCell" class="product-img">
-                    <div class="product-info">
-                        <h3>TheraCell</h3>
-                        <p>Stem cell-based therapeutic for regenerative medicine applications</p>
-                        <a href="./404.html"><button class="product-button">Learn More</button></a>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2015</h3>
+                        <p>Expanded research facilities and established partnerships with three major research universities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2017</h3>
+                        <p>Received FDA approval for our first diagnostic kit, marking our entry into clinical applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2019</h3>
+                        <p>Opened European headquarters in Berlin, expanding our global reach and research collaborations.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h3>2021</h3>
+                        <p>Launched our breakthrough immunotherapy platform, advancing cancer treatment options.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>Celebrated our 500th research publication and expanded into stem cell therapeutics.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-img">
-                <img src="./image/tube.webp" alt="About STACKLY Biotech">
-            </div>
-            <div class="about-content">
-                <h2>Our Mission</h2>
-                <p>STACKLY Biotech is dedicated to advancing healthcare through innovative biotechnology solutions. Our team of scientists and researchers work at the intersection of biology and technology to develop groundbreaking therapies and diagnostic tools.</p>
-                <p>Founded in 2010, we have grown into a leading biotechnology company with a focus on genomic medicine, immunotherapy, and precision diagnostics. Our commitment to scientific excellence drives everything we do.</p>
-                <a href="./404.html" class="cta-button">Learn More</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testimonials">
+    <!-- Leadership Team -->
+    <section class="team">
         <div class="container">
             <div class="section-title">
-                <h2>What Our Partners Say</h2>
-                <p>Hear from healthcare professionals and research collaborators</p>
+                <h2>Leadership Team</h2>
+                <p>Meet the experts guiding our vision and innovation</p>
             </div>
-            <div class="testimonial-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"STACKLY Biotech's genomic sequencing platform has revolutionized our research capabilities. The data quality and analysis tools are exceptional."</p>
-                    <p class="testimonial-author">- Dr. Sarah Johnson, Research Director</p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="./image/team1.webp" alt="Dr. Elena Rodriguez" class="team-img">
+                    <div class="team-info">
+                        <h3>Dr. Elena Rodriguez</h3>
+                        <p>Founder & CEO</p>
+                        <p class="team-desc">Dr. Rodriguez founded STACKLY Biotech with a vision to transform healthcare through genomic medicine. With over 20 years of experience in biotechnology research, she leads our strategic direction and innovation initiatives.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"The diagnostic kits developed by STACKLY have significantly improved our ability to detect diseases at earlier stages, leading to better patient outcomes."</p>
-                    <p class="testimonial-author">- Dr. Michael Chen, Chief of Pathology</p>
+                <div class="team-card">
+                    <img src="./image/team2.webp" alt="Dr. James Chen" class="team-img">
+                    <div class="team-info">
+                        <h3>Dr. James Chen</h3>
+                        <p>Chief Scientific Officer</p>
+                        <p class="team-desc">Dr. Chen oversees all research and development activities at STACKLY. His expertise in immunology and gene therapy has been instrumental in developing our innovative therapeutic platforms.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Working with STACKLY on our immunotherapy research has been transformative. Their expertise and innovative approach are unmatched in the industry."</p>
-                    <p class="testimonial-author">- Dr. Priya Sharma, Oncology Research</p>
+                <div class="team-card">
+                    <img src="./image/team3.webp" alt="Dr. Sarah Johnson" class="team-img">
+                    <div class="team-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p>VP of Research</p>
+                        <p class="team-desc">Dr. Johnson leads our genomic medicine division, focusing on developing advanced sequencing technologies and bioinformatics tools. She has published over 50 peer-reviewed papers in the field.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1043,24 +1122,6 @@
                     menuToggle.classList.remove('fa-times');
                     menuToggle.classList.add('fa-bars');
                 }
-            });
-        });
-
-        // Product buttons functionality
-        const productButtons = document.querySelectorAll('.product-button');
-        productButtons.forEach(button => {
-            button.addEventListener('click', function() {
-                // Add visual feedback
-                const originalText = this.textContent;
-                this.textContent = 'Redirecting...';
-                this.style.backgroundColor = '#2ecc71';
-                
-                setTimeout(() => {
-                    this.textContent = originalText;
-                    this.style.backgroundColor = '';
-                    // In a real implementation, this would redirect to the product page
-                    window.location.href = './products.html';
-                }, 1000);
             });
         });
     </script>
