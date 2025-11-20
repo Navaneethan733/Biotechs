@@ -795,18 +795,26 @@
             }
             
             /* Navigation */
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-                z-index: 1001;
-            }
+            @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        z-index: 1001;
+
+        /* ADD THESE LINES ⇩ */
+        align-items: center;        /* Centers horizontally */
+        justify-content: center;    /* Centers vertically (if needed) */
+        text-align: center;         /* Ensure text is centered */
+    }
+}
+
 
             .nav-links.active {
                 display: flex;
