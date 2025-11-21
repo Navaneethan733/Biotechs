@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STACKLY Biotech - Advancing Healthcare</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-     <style>
+    <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-           font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         :root {
@@ -243,7 +243,7 @@
             letter-spacing: 1.5px;
             cursor: pointer;
             transition: var(--transition);
-            font-family: 'Raleway', sans-serif;
+            font-family: 'Inter', sans-serif;
             animation: fadeInUp 1s ease-out 0.4s both;
             position: relative;
             overflow: hidden;
@@ -416,28 +416,23 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Design */
+        /* Responsive Design - Fixed the duplicate media query issue */
         @media (max-width: 768px) {
-            @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white;
-        flex-direction: column;
-        padding: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        z-index: 1001;
-
-        /* ADD THESE LINES ⇩ */
-        align-items: center;        /* Centers horizontally */
-        justify-content: center;    /* Centers vertically (if needed) */
-        text-align: center;         /* Ensure text is centered */
-    }
-}
-
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                z-index: 1001;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
 
             .nav-links.active {
                 display: flex;
@@ -446,6 +441,13 @@
             .nav-links li {
                 margin: 10px 0;
                 text-align: center;
+                width: 100%;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 10px 0;
+                width: 100%;
             }
 
             .menu-toggle {
