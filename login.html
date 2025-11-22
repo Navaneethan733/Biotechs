@@ -979,14 +979,8 @@
             }
         });
 
-        // Social login buttons
-        document.querySelectorAll('.social-button').forEach(button => {
-            button.addEventListener('click', function() {
-                const platform = this.querySelector('span').textContent;
-                alert(`Redirecting to ${platform} authentication...`);
-                // In a real implementation, this would redirect to OAuth flow
-            });
         });
     </script>
 </body>
+
 </html>
